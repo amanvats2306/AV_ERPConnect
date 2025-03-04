@@ -1,0 +1,6 @@
+@AV_ERPConnect_HostAddress = http://localhost:5233
+
+GET {{AV_ERPConnect_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
