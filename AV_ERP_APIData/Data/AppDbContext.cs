@@ -18,6 +18,11 @@ namespace AV_ERP_DATA_BUSINESS.Data
         public AppDbContext()
         {
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserERP>().ToTable("Users"); // Ensure table name is correct
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
